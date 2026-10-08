@@ -2,8 +2,6 @@
 
 **Stav:** podklad na hackathon 9. 10. 2026, sladěný s [wireframem ve Figmě](https://www.figma.com/design/IjEnmXXeJB8YBOWPjWiFu3/Trainloop-wireframe?node-id=0-1). Čísla `F-xx` odkazují na [feature-breakdown.xlsx](feature-breakdown.xlsx).
 
-**Rozhodnuto:** pozvánku posílá **trenér klientovi**, protože aplikaci platí trenér (F-08). Klient se připojí přes „Mám pozvánku“ na úvodní obrazovce.
-
 ![Sitemapa TrainLoop](sitemapa.svg)
 
 ## Pojmy
@@ -20,11 +18,12 @@
 ## Jak vzniká a probíhá trénink
 
 1. **Trenér pozve klienta** (Klienti → Pozvat klienta). Klient na úvodní obrazovce zvolí *Mám pozvánku*, zaregistruje se a založí psa. Pes se trenérovi objeví v *Klientech*.
-2. **Trenér složí plán** (Pes → + → *Tvorba tréninku*). Přidává bloky dvou typů, *Jednotlivý cvik* a *Sekvenci cviků*, a spojuje je šipkami. Cesta se může rozdělit na dvě větve a ty se pak znovu spojí. Tlačítko + přidá blok, přetažením do koše se blok smaže.
-3. **Trénink se objeví v kalendáři psovoda** (*Týden*). Den má barevné proužky podle psa, po kliknutí na den se zobrazí karta tréninku se seznamem cviků.
-4. **Psovod trénuje.** Otevře trénink a prochází cviky jeden po druhém („Aktuální cvik 3/20“, šipky vlevo a vpravo).
-5. **Psovod odešle záznam.** Na obrazovce *Konec* nahraje video, napíše komentář a odešle.
-6. **Trenér reaguje.** U klienta v *Klientech* svítí štítek „čeká na reakci“. Trenér si záznam prohlédne, odpoví a podle výsledku upraví plán v *Tvorbě tréninku*. Obrazovka pro odpověď ve wireframu zatím chybí.
+2. **Trenér otevře psa klienta:** *Klienti* → klient → *Detail klienta* → jeho pes → *Pes*. Je to stejná obrazovka, jakou vidí psovod u svého psa.
+3. **Trenér složí trénink:** na obrazovce *Pes* tlačítkem + otevře *Tvorbu tréninku*. Přidává bloky dvou typů, *Jednotlivý cvik* a *Sekvenci cviků*, a spojuje je šipkami. Cesta se může rozdělit na dvě větve a ty se pak znovu spojí. Tlačítko + přidá blok, přetažením do koše se blok smaže.
+4. **Trenér trénink naplánuje:** po uložení vybere, ve které dny se má cvičit (např. každé pondělí a čtvrtek, od–do). Trénink se tím objeví klientovi v *Týdnu* a v *Aktivitách* psa. Den má v kalendáři barevný proužek podle psa, po kliknutí na den se zobrazí karta tréninku se seznamem cviků.
+5. **Psovod trénuje.** Otevře trénink a prochází cviky jeden po druhém („Aktuální cvik 3/20“, šipky vlevo a vpravo).
+6. **Psovod odešle záznam.** Na obrazovce *Konec* nahraje video, napíše komentář a odešle.
+7. **Trenér reaguje.** U klienta v *Klientech* svítí štítek „čeká na reakci“. Trenér si záznam prohlédne, odpoví a podle výsledku upraví plán v *Tvorbě tréninku*. Obrazovka pro odpověď ve wireframu zatím chybí.
 
 ## Co znamená nelinearita a větvení
 
@@ -54,12 +53,13 @@ Sloupec *Wireframe* uvádí název rámce ve Figmě, nebo „chybí“, pokud ob
 | ↳ Nový pes | chybí | Jméno, plemeno, fotka, disciplíny | F-04, F-05 |
 | ↳ **Pes** (detail) | Pes | Fotka, jméno, plemeno a *Aktivity*, tedy tréninky psa po dnech. Tlačítko + vede na *Tvorbu tréninku* | F-07, F-26 |
 | ↳ ↳ **Tvorba tréninku** | Tvorba tréninku | Plán z bloků *Jednotlivý cvik* a *Sekvence cviků*, větvení a spojení, + přidat blok, koš smazat | F-12 – F-16 |
+| ↳ ↳ ↳ Naplánovat trénink | chybí | Po uložení tréninku: dny v týdnu a období (od–do). Trénink se pak objeví v Týdnu klienta | F-20 |
 | **Týden** | Týden | Výběr týdne, dny Po–Ne s barevnými proužky podle psů. Po kliknutí na den karta tréninku („Alík Canicross Trénink“ a seznam cviků) | F-19 – F-22 |
 | ↳ Trénink (průchod) | Trénink | „Aktuální cvik 3/20“, název cviku, šipkami na předchozí a další cvik | F-43 |
 | ↳ Trénink (konec) | Trénink | *Nahrát video*, *Komentář*, *Odeslat* | F-24, F-25, F-30 |
 | **Klienti** (jen trenér) | Klienti | Karty klientů (jméno, e-mail), štítek „čeká na reakci“ | F-31, F-32 |
 | ↳ Pozvat klienta | chybí | E-mail klienta nebo kód / odkaz k předání na lekci | F-08, F-09 |
-| ↳ Detail klienta | chybí | Psi klienta (vedou na *Pes*) a záznamy čekající na reakci | F-31, F-32 |
+| ↳ Detail klienta | chybí | Psi klienta (klik vede na *Pes*, odkud trenér zadává tréninky) a záznamy čekající na reakci | F-31, F-32 |
 | ↳ Reakce trenéra | chybí | Odeslaný záznam (video, komentář) a odpověď trenéra | F-30 |
 | **Profil** | Účet | Jméno, e-mail, změna hesla, odhlásit se, smazat účet | F-01, F-39 |
 
@@ -69,7 +69,7 @@ Sloupec *Wireframe* uvádí název rámce ve Figmě, nebo „chybí“, pokud ob
 
 1. **Trenér začíná:** Registrace → Klienti → Pozvat klienta.
 2. **Klient se připojí:** Úvodní stránka → Mám pozvánku → Registrace → Nový pes → pes se trenérovi objeví v Klientech.
-3. **Trenér připraví trénink:** Klienti → Detail klienta → Pes → + → Tvorba tréninku.
+3. **Trenér zadá trénink:** Klienti → Detail klienta → Pes → + → Tvorba tréninku → Naplánovat trénink → trénink je v Týdnu klienta.
 4. **Psovod trénuje:** Týden → den → Trénink (cvik po cviku) → Konec → video, komentář → Odeslat.
 5. **Trenér reaguje:** Klienti („čeká na reakci“) → Detail klienta → Reakce trenéra → případně úprava v Tvorbě tréninku.
 
@@ -95,8 +95,8 @@ Seřazené podle dopadu na datový model a wireframe. U každé je návrh týmu.
    *Návrh:* pokud ano, přidat na obrazovku *Konec* jedno pole za celý trénink (% nebo Splněno / Částečně / Nesplněno).
 4. **Co udělá tlačítko *Nahrát video*:** nahraje soubor, nebo stačí vložit odkaz (YouTube, Disk)? → F-25, F-28, viz také otázka 5.
    *Návrh:* v MVP odkaz. Nahrávání souborů na náš server je dražší a je mimo rozsah (F-28).
-5. **Jak se trénink dostane do kalendáře?** Ve wireframu je „vygenerovaný popis tréninku“. Rozvrhne aplikace cviky z plánu do dnů sama, nebo trenér či psovod zařadí trénink na konkrétní den ručně? → F-20, viz také otázka 4.
-   *Návrh:* ručně, trenér nebo psovod vybere den. Automatický rozvrh nechat jako Nice to have.
+5. **Jak se trénink dostane do kalendáře?** Ve wireframu je „vygenerovaný popis tréninku“. Vybere trenér dny sám, nebo má aplikace trénink do týdne rozvrhnout automaticky? Smí psovod trénink přesunout na jiný den? → F-20, F-21, viz také otázka 4.
+   *Návrh:* trenér po uložení tréninku vybere dny v týdnu a období (obrazovka *Naplánovat trénink*). Psovod může trénink přesunout na jiný den. Automatický rozvrh nechat jako Nice to have.
 6. **Má plán upravovat i psovod?** A může psovod aplikaci používat i bez trenéra? → F-16, F-01, viz také otázka 2.
    *Návrh:* plán sestavuje a upravuje trenér, psovod trénuje a posílá záznamy. Psovod bez trenéra je mimo MVP.
 7. **Pozvánka od trenéra:** zve trenér člověka, nebo rovnou konkrétního psa? Co když klient už účet má (např. kvůli jinému trenérovi)? Jak dlouho platí kód? → F-08, F-09.
