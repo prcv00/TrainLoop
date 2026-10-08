@@ -11,12 +11,11 @@
 | Pojem | Význam | Příklad |
 | --- | --- | --- |
 | **Disciplína** | Oblast, ve které pes trénuje | canicross, nosework, poslušnost |
-| **Cíl** | Čeho chceme v disciplíně dosáhnout. Ve wireframu zatím není | „5 km pod 5 min/km“ |
 | **Cvik** | Jeden konkrétní krok. V briefu se mu říká „úkol“ | „Běh v plném tahu 400 m“, „oční kontakt“ |
 | **Sekvence cviků** | Několik cviků, které jdou vždy po sobě jako jeden blok | rozběh → 3× 400 m → vyklusání |
-| **Plán** | Cviky a sekvence seřazené za sebou, případně rozvětvené. Skládá se na obrazovce *Tvorba tréninku* | „Trénink pro Rexe“ ve wireframu |
+| **Plán** | Cviky a sekvence seřazené za sebou, případně rozvětvené. Trenér ho skládá pro psa v disciplíně na obrazovce *Tvorba tréninku* | „Trénink pro Rexe“ ve wireframu |
 | **Trénink** | Jedno cvičení v konkrétní den v kalendáři. Psovod ho prochází cvik po cviku | „Alík Canicross Trénink“ v pátek |
-| **Záznam** | Co psovod po tréninku odešle: video, komentář (a % úspěšnosti, viz otázka 3) | |
+| **Záznam** | Co psovod po tréninku odešle: video a komentář | |
 
 ## Jak vzniká a probíhá trénink
 
@@ -31,7 +30,7 @@
 
 **Lineární plán** je jako sešit: cvik 1 → 2 → 3 → 4, vždy ve stejném pořadí.
 
-**Nelineární plán** podle briefu reaguje na to, jak psovi trénink jde. Mění se **v čase, napříč tréninky a týdny**, podle zapsaných výsledků. Na příkladu z briefu (cíl „pozornost v silně rušivém prostředí“: oční kontakt → delší podržení → mírné rušivky → silné rušivky):
+**Nelineární plán** podle briefu reaguje na to, jak psovi trénink jde. Mění se **v čase, napříč tréninky a týdny**, podle zapsaných výsledků. Na příkladu z briefu (plán „pozornost v silně rušivém prostředí“: oční kontakt → delší podržení → mírné rušivky → silné rušivky):
 
 | Situace | Co se v plánu stane | Feature |
 | --- | --- | --- |
@@ -40,7 +39,7 @@
 | Skok mezi mírnými a silnými rušivkami je moc velký | **Vložení mezikroku** | F-13 |
 | Pes se při rušivkách přetěžuje | **Rozvětvení:** cesta se rozdělí na dvě větve, které se trénují souběžně (např. „pozornost venku“ a „práce s klidem“). Až pes obě zvládne, cesty se znovu spojí | F-15 |
 
-Wireframe kreslí větvení na obrazovce *Tvorba tréninku*. Není ale jasné, jestli tato obrazovka znázorňuje **plán k cíli na několik týdnů** (význam z briefu), nebo **jeden trénink** (pak by větev znamenala, že si psovod během tréninku vybere jednu cestu). Na tom závisí datový model, proto je to otázka č. 1.
+Wireframe kreslí větvení na obrazovce *Tvorba tréninku*. Není ale jasné, jestli tato obrazovka znázorňuje **plán na několik týdnů** (význam z briefu), nebo **jeden trénink** (pak by větev znamenala, že si psovod během tréninku vybere jednu cestu). Na tom závisí datový model, proto je to otázka č. 1.
 
 ## Obrazovky
 
@@ -84,37 +83,25 @@ Sloupec *Wireframe* uvádí název rámce ve Figmě, nebo „chybí“, pokud ob
 | Nevratná akce (smazání bloku, psa, účtu) | Potvrzovací dialog |
 | Neexistující stránka, chyba serveru | 404 / chybová obrazovka s možností zkusit znovu |
 
-## Wireframe vs. feature breakdown
-
-Místa, kde se wireframe liší od feature breakdownu. Potřebujeme od PO rozhodnutí, co platí.
-
-| Téma | Feature breakdown | Wireframe |
-| --- | --- | --- |
-| Cíle | Cíl v disciplíně → cviky (F-12) | Cíle nejsou, trenér skládá rovnou trénink |
-| Výsledek tréninku | Výsledek (% úspěšnosti) a komentář (F-24) | Video a komentář, % chybí |
-| Video | Odkaz na video (F-25), nahrávání na náš server je mimo rozsah (F-28) | Tlačítko *Nahrát video* |
-| Kdo upravuje plán | Psovod i trenér (F-12 – F-15) | Jen trenér (z Klientů) |
-| Komentáře | Vlákno mezi psovodem a trenérem (F-30) | Jen komentář psovoda při odeslání |
-
 ## Otázky pro PO
 
 Seřazené podle dopadu na datový model a wireframe. U každé je návrh týmu. Další otázky jsou v [otazky-na-klienta.md](otazky-na-klienta.md), odkazy uvádíme.
 
-1. **Co je větvení: plán k cíli na týdny, nebo jeden trénink?** Ukažte prosím na příkladu se Zoe, kdy jste naposledy cestu rozdělila. Trénují se pak obě větve souběžně, nebo se podle psa vybere jedna? Spojí se zase? → F-15, viz také otázka 1 v otazky-na-klienta.
-   *Návrh:* *Tvorba tréninku* zobrazuje plán k cíli. Obě větve se trénují souběžně a každá má vlastní aktuální cvik.
-2. **Potřebujeme cíle?** Feature breakdown je má, wireframe ne. Stačí trénink pro psa s disciplínou, nebo trenér plánuje vždy k nějakému cíli? → F-12.
-   *Návrh:* cíl ponechat jako nadpis plánu (název + disciplína), bez termínů a kritérií.
-3. **Jak se zapisuje výsledek?** Wireframe má jen video a komentář. Má psovod zadávat % úspěšnosti, a pokud ano, za každý cvik, nebo za celý trénink? → F-24, viz také otázka 3.
-   *Návrh:* jedno % (nebo Splněno / Částečně / Nesplněno) za celý trénink, na obrazovce *Konec*.
-4. **Nahrát video, nebo vložit odkaz?** Feature breakdown počítá s odkazem, wireframe má *Nahrát video*. → F-25, F-28, viz také otázka 5.
-   *Návrh:* v MVP vložit odkaz (YouTube, Disk), tlačítko na obrazovce přejmenovat.
+1. **Co je větvení: plán na několik týdnů, nebo jeden trénink?** Ukažte prosím na příkladu se Zoe, kdy jste naposledy cestu rozdělila. Trénují se pak obě větve souběžně, nebo se podle psa vybere jedna? Spojí se zase? → F-15, viz také otázka 1 v otazky-na-klienta.
+   *Návrh:* *Tvorba tréninku* zobrazuje plán na několik týdnů. Obě větve se trénují souběžně a každá má vlastní aktuální cvik.
+2. **Chcete u plánu i cíl** (např. „5 km pod 5 min/km“), nebo stačí plán v disciplíně s názvem? → F-12.
+   *Návrh:* v MVP stačí název a disciplína, cíl s termínem a kritériem až později.
+3. **Stačí po tréninku video a komentář, nebo chcete i % úspěšnosti?** Pokud ano, za každý cvik, nebo za celý trénink? → F-24, F-27, viz také otázka 3.
+   *Návrh:* pokud ano, přidat na obrazovku *Konec* jedno pole za celý trénink (% nebo Splněno / Částečně / Nesplněno).
+4. **Co udělá tlačítko *Nahrát video*:** nahraje soubor, nebo stačí vložit odkaz (YouTube, Disk)? → F-25, F-28, viz také otázka 5.
+   *Návrh:* v MVP odkaz. Nahrávání souborů na náš server je dražší a je mimo rozsah (F-28).
 5. **Jak se trénink dostane do kalendáře?** Ve wireframu je „vygenerovaný popis tréninku“. Rozvrhne aplikace cviky z plánu do dnů sama, nebo trenér či psovod zařadí trénink na konkrétní den ručně? → F-20, viz také otázka 4.
    *Návrh:* ručně, trenér nebo psovod vybere den. Automatický rozvrh nechat jako Nice to have.
-6. **Smí plán upravovat i psovod?** Feature breakdown říká ano, wireframe počítá jen s trenérem. A může psovod aplikaci používat i bez trenéra? → F-16, F-01, viz také otázka 2.
+6. **Má plán upravovat i psovod?** A může psovod aplikaci používat i bez trenéra? → F-16, F-01, viz také otázka 2.
    *Návrh:* plán sestavuje a upravuje trenér, psovod trénuje a posílá záznamy. Psovod bez trenéra je mimo MVP.
 7. **Pozvánka od trenéra:** zve trenér člověka, nebo rovnou konkrétního psa? Co když klient už účet má (např. kvůli jinému trenérovi)? Jak dlouho platí kód? → F-08, F-09.
    *Návrh:* trenér zve člověka. Klient po přijetí vybere nebo založí psa. Kód platí 7 dní.
-8. **Jak trenér odpovídá a kde odpověď psovod uvidí?** Wireframe končí komentářem psovoda. → F-30, viz také otázka 8.
+8. **Jak trenér odpovídá a kde odpověď psovod uvidí?** Obrazovku *Reakce trenéra* je potřeba dokreslit. → F-30, viz také otázka 8.
    *Návrh:* vlákno komentářů u odeslaného tréninku. Psovodovi se u tréninku v Týdnu ukáže štítek „nová odpověď“.
 9. **Navigace podle role:** vidí psovod záložku *Klienti*? Má trenér i vlastní psy v záložce *Psi*? Která obrazovka je výchozí? → F-01.
    *Návrh:* psovod má Psi · Týden · Profil, trenér navíc Klienti. Trenér začíná na Klientech, psovod na Týdnu.
