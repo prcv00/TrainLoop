@@ -84,18 +84,17 @@ Sloupec *Wireframe* uvádí název rámce ve Figmě, nebo „chybí“, pokud ob
 | Nevratná akce (smazání bloku, psa, účtu) | Potvrzovací dialog |
 | Neexistující stránka, chyba serveru | 404 / chybová obrazovka s možností zkusit znovu |
 
-## Wireframe vs. upravený plán
+## Wireframe vs. feature breakdown
 
-Místa, kde se wireframe liší od upraveného plánu (UP). Potřebujeme od PO rozhodnutí, co platí.
+Místa, kde se wireframe liší od feature breakdownu. Potřebujeme od PO rozhodnutí, co platí.
 
-| Téma | Upravený plán | Wireframe |
+| Téma | Feature breakdown | Wireframe |
 | --- | --- | --- |
-| Cíle | Cíl v disciplíně → úkoly (část B) | Cíle nejsou, trenér skládá rovnou trénink |
-| Výsledek tréninku | % úspěšnosti, poznámka, odkaz na video (část D) | Video a komentář, % chybí |
-| Video | Jen odkaz, žádný upload na vlastní servery (část 5) | Tlačítko *Nahrát video* |
-| Kdo upravuje plán | Psovod i trenér (část B) | Jen trenér (z Klientů) |
-| Komentáře | Vlákno pod úkolem mezi psovodem a trenérem (část D) | Jen komentář psovoda při odeslání |
-| Barvy v kalendáři | — | Podle psa, ne podle disciplíny |
+| Cíle | Cíl v disciplíně → cviky (F-12) | Cíle nejsou, trenér skládá rovnou trénink |
+| Výsledek tréninku | Výsledek (% úspěšnosti) a komentář (F-24) | Video a komentář, % chybí |
+| Video | Odkaz na video (F-25), nahrávání na náš server je mimo rozsah (F-28) | Tlačítko *Nahrát video* |
+| Kdo upravuje plán | Psovod i trenér (F-12 – F-15) | Jen trenér (z Klientů) |
+| Komentáře | Vlákno mezi psovodem a trenérem (F-30) | Jen komentář psovoda při odeslání |
 
 ## Otázky pro PO
 
@@ -103,15 +102,15 @@ Seřazené podle dopadu na datový model a wireframe. U každé je návrh týmu.
 
 1. **Co je větvení: plán k cíli na týdny, nebo jeden trénink?** Ukažte prosím na příkladu se Zoe, kdy jste naposledy cestu rozdělila. Trénují se pak obě větve souběžně, nebo se podle psa vybere jedna? Spojí se zase? → F-15, viz také otázka 1 v otazky-na-klienta.
    *Návrh:* *Tvorba tréninku* zobrazuje plán k cíli. Obě větve se trénují souběžně a každá má vlastní aktuální cvik.
-2. **Potřebujeme cíle?** Upravený plán je má, wireframe ne. Stačí trénink pro psa s disciplínou, nebo trenér plánuje vždy k nějakému cíli? → F-12.
+2. **Potřebujeme cíle?** Feature breakdown je má, wireframe ne. Stačí trénink pro psa s disciplínou, nebo trenér plánuje vždy k nějakému cíli? → F-12.
    *Návrh:* cíl ponechat jako nadpis plánu (název + disciplína), bez termínů a kritérií.
 3. **Jak se zapisuje výsledek?** Wireframe má jen video a komentář. Má psovod zadávat % úspěšnosti, a pokud ano, za každý cvik, nebo za celý trénink? → F-24, viz také otázka 3.
    *Návrh:* jedno % (nebo Splněno / Částečně / Nesplněno) za celý trénink, na obrazovce *Konec*.
-4. **Nahrát video, nebo vložit odkaz?** Upravený plán upload vylučuje, wireframe má *Nahrát video*. → F-25, F-28, viz také otázka 5.
+4. **Nahrát video, nebo vložit odkaz?** Feature breakdown počítá s odkazem, wireframe má *Nahrát video*. → F-25, F-28, viz také otázka 5.
    *Návrh:* v MVP vložit odkaz (YouTube, Disk), tlačítko na obrazovce přejmenovat.
 5. **Jak se trénink dostane do kalendáře?** Ve wireframu je „vygenerovaný popis tréninku“. Rozvrhne aplikace cviky z plánu do dnů sama, nebo trenér či psovod zařadí trénink na konkrétní den ručně? → F-20, viz také otázka 4.
    *Návrh:* ručně, trenér nebo psovod vybere den. Automatický rozvrh nechat jako Nice to have.
-6. **Smí plán upravovat i psovod?** Upravený plán říká ano, wireframe počítá jen s trenérem. A může psovod aplikaci používat i bez trenéra? → F-16, F-01, viz také otázka 2.
+6. **Smí plán upravovat i psovod?** Feature breakdown říká ano, wireframe počítá jen s trenérem. A může psovod aplikaci používat i bez trenéra? → F-16, F-01, viz také otázka 2.
    *Návrh:* plán sestavuje a upravuje trenér, psovod trénuje a posílá záznamy. Psovod bez trenéra je mimo MVP.
 7. **Pozvánka od trenéra:** zve trenér člověka, nebo rovnou konkrétního psa? Co když klient už účet má (např. kvůli jinému trenérovi)? Jak dlouho platí kód? → F-08, F-09.
    *Návrh:* trenér zve člověka. Klient po přijetí vybere nebo založí psa. Kód platí 7 dní.
