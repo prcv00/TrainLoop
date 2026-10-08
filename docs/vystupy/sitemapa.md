@@ -19,8 +19,8 @@
 
 1. **Trenér pozve klienta** (Klienti → Pozvat klienta). Klient na úvodní obrazovce zvolí *Mám pozvánku*, zaregistruje se a založí psa. Pes se trenérovi objeví v *Klientech*.
 2. **Trenér otevře psa klienta:** *Klienti* → klient → *Detail klienta* → jeho pes → *Pes*. Je to stejná obrazovka, jakou vidí psovod u svého psa.
-3. **Trenér složí trénink:** na obrazovce *Pes* tlačítkem + otevře *Tvorbu tréninku*. Přidává bloky dvou typů, *Jednotlivý cvik* a *Sekvenci cviků*, a spojuje je šipkami. Cesta se může rozdělit na dvě větve a ty se pak znovu spojí. Tlačítko + přidá blok, přetažením do koše se blok smaže.
-4. **Trenér trénink naplánuje:** po uložení vybere, ve které dny se má cvičit (např. každé pondělí a čtvrtek, od–do). Trénink se tím objeví klientovi v *Týdnu* a v *Aktivitách* psa. Den má v kalendáři barevný proužek podle psa, po kliknutí na den se zobrazí karta tréninku se seznamem cviků.
+3. **Trenér složí plán:** na obrazovce *Pes* tlačítkem + otevře *Tvorbu tréninku*. Přidává bloky dvou typů, *Jednotlivý cvik* a *Sekvenci cviků*, a spojuje je šipkami. Cesta se může rozdělit na dvě větve a ty se pak znovu spojí. Tlačítko + přidá blok, přetažením do koše se blok smaže.
+4. **Trenér plán naplánuje:** po uložení vybere, ve které dny se má cvičit (např. každé pondělí a čtvrtek, od–do). V těchto dnech se klientovi v *Týdnu* a v *Aktivitách* psa objeví trénink. Den má v kalendáři barevný proužek podle psa, po kliknutí na den se zobrazí karta tréninku se seznamem cviků.
 5. **Psovod trénuje.** Otevře trénink a prochází cviky jeden po druhém („Aktuální cvik 3/20“, šipky vlevo a vpravo).
 6. **Psovod odešle záznam.** Na obrazovce *Konec* nahraje video, napíše komentář a odešle.
 7. **Trenér reaguje.** U klienta v *Klientech* svítí štítek „čeká na reakci“. Trenér si záznam prohlédne, odpoví a podle výsledku upraví plán v *Tvorbě tréninku*. Obrazovka pro odpověď ve wireframu zatím chybí.
