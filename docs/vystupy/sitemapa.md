@@ -25,21 +25,6 @@
 6. **Psovod odešle záznam.** Na obrazovce *Konec* nahraje video, napíše komentář a odešle.
 7. **Trenér reaguje.** U klienta v *Klientech* svítí štítek „čeká na reakci“. Trenér si záznam prohlédne, odpoví a podle výsledku upraví plán v *Tvorbě tréninku*. Obrazovka pro odpověď ve wireframu zatím chybí.
 
-## Co znamená nelinearita a větvení
-
-**Lineární plán** je jako sešit: cvik 1 → 2 → 3 → 4, vždy ve stejném pořadí.
-
-**Nelineární plán** reaguje na to, jak psovi trénink jde. Mění se **v čase, napříč tréninky a týdny**, podle zapsaných výsledků. Na příkladu (plán „pozornost v silně rušivém prostředí“: oční kontakt → delší podržení → mírné rušivky → silné rušivky):
-
-| Situace | Co se v plánu stane | Feature |
-| --- | --- | --- |
-| Mírné rušivky psovi nejdou | **Návrat** o krok zpět na delší podržení | F-14 |
-| Delší podržení pes už umí | **Přeskočení** rovnou na mírné rušivky | F-14 |
-| Skok mezi mírnými a silnými rušivkami je moc velký | **Vložení mezikroku** | F-13 |
-| Pes se při rušivkách přetěžuje | **Rozvětvení:** cesta se rozdělí na dvě větve, které se trénují souběžně (např. „pozornost venku“ a „práce s klidem“). Až pes obě zvládne, cesty se znovu spojí | F-15 |
-
-Wireframe kreslí větvení na obrazovce *Tvorba tréninku*. Není ale jasné, jestli tato obrazovka znázorňuje **plán na několik týdnů** (jak je popsáno výše), nebo **jeden trénink** (pak by větev znamenala, že si psovod během tréninku vybere jednu cestu). Na tom závisí datový model, proto je to otázka č. 1.
-
 ## Obrazovky
 
 Sloupec *Wireframe* uvádí název rámce ve Figmě, nebo „chybí“, pokud obrazovku je ještě potřeba nakreslit.
