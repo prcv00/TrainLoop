@@ -90,7 +90,7 @@
   * Založí psa psovod a dá trenérce kód na hodině, nebo naopak trenérka pošle svým klientům pozvánku, aby si psa zaregistrovali pod její účet?  
   * Co se stane, když pozvaná trenérka ještě nemá v aplikaci účet?
 * **Návrh / Předpoklad týmu:**  
-  Prioritizovat flow psovoda: Psovod vygeneruje 6místný kód nebo odkaz, který pošle trenérovi. Pokud trenér účet nemá, odkaz ho navede na registraci a rovnou psa spáruje. Obrácené flow (trenér zve klienta) ponechat jako *Nice to have* (F-11).
+  **Rozhodnuto:** zve trenér, protože aplikaci platí. Trenér pošle klientovi e-mail nebo kód, klient se přes „Mám pozvánku“ zaregistruje a propojí (F-08, F-09). Obrácené flow (psovod zve trenéra) je *Nice to have* (F-11). Zbývající otázky k pozvánce jsou v [sitemapa.md](sitemapa.md), otázka 7.
 
 ---
 
