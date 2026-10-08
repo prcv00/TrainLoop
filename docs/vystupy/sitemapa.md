@@ -70,23 +70,16 @@ Sloupec *Wireframe* uvádí název rámce ve Figmě, nebo „chybí“, pokud ob
 
 ## Otázky pro PO
 
-Seřazené podle dopadu na datový model a wireframe. U každé je návrh týmu. Další otázky jsou v [otazky-na-klienta.md](otazky-na-klienta.md), odkazy uvádíme.
+Seřazené podle důležitosti. Návrh je výchozí bod k diskuzi.
 
-1. **Co je větvení: plán na několik týdnů, nebo jeden trénink?** Ukažte prosím na příkladu se Zoe, kdy jste naposledy cestu rozdělila. Trénují se pak obě větve souběžně, nebo se podle psa vybere jedna? Spojí se zase? → F-15, viz také otázka 1 v otazky-na-klienta.
-   *Návrh:* *Tvorba tréninku* zobrazuje plán na několik týdnů. Obě větve se trénují souběžně a každá má vlastní aktuální cvik.
-2. **Chcete u plánu i cíl** (např. „5 km pod 5 min/km“), nebo stačí plán v disciplíně s názvem? → F-12.
-   *Návrh:* v MVP stačí název a disciplína, cíl s termínem a kritériem až později.
-3. **Stačí po tréninku video a komentář, nebo chcete i % úspěšnosti?** Pokud ano, za každý cvik, nebo za celý trénink? → F-24, F-27, viz také otázka 3.
-   *Návrh:* pokud ano, přidat na obrazovku *Konec* jedno pole za celý trénink (% nebo Splněno / Částečně / Nesplněno).
-4. **Co udělá tlačítko *Nahrát video*:** nahraje soubor, nebo stačí vložit odkaz (YouTube, Disk)? → F-25, F-28, viz také otázka 5.
-   *Návrh:* v MVP odkaz. Nahrávání souborů na náš server je dražší a je mimo rozsah (F-28).
-5. **Jak se trénink dostane do kalendáře?** Ve wireframu je „vygenerovaný popis tréninku“. Vybere trenér dny sám, nebo má aplikace trénink do týdne rozvrhnout automaticky? Smí psovod trénink přesunout na jiný den? → F-20, F-21, viz také otázka 4.
-   *Návrh:* trenér po uložení tréninku vybere dny v týdnu a období (obrazovka *Naplánovat trénink*). Psovod může trénink přesunout na jiný den. Automatický rozvrh nechat jako Nice to have.
-6. **Má plán upravovat i psovod?** A může psovod aplikaci používat i bez trenéra? → F-16, F-01, viz také otázka 2.
-   *Návrh:* plán sestavuje a upravuje trenér, psovod trénuje a posílá záznamy. Psovod bez trenéra je mimo MVP.
-7. **Pozvánka od trenéra:** zve trenér člověka, nebo rovnou konkrétního psa? Co když klient už účet má (např. kvůli jinému trenérovi)? Jak dlouho platí kód? → F-08, F-09.
-   *Návrh:* trenér zve člověka. Klient po přijetí vybere nebo založí psa. Kód platí 7 dní.
-8. **Jak trenér odpovídá a kde odpověď psovod uvidí?** Obrazovku *Reakce trenéra* je potřeba dokreslit. → F-30, viz také otázka 8.
-   *Návrh:* vlákno komentářů u odeslaného tréninku. Psovodovi se u tréninku v Týdnu ukáže štítek „nová odpověď“.
-9. **Navigace podle role:** vidí psovod záložku *Klienti*? Má trenér i vlastní psy v záložce *Psi*? Která obrazovka je výchozí? → F-01.
-   *Návrh:* psovod má Psi · Týden · Profil, trenér navíc Klienti. Trenér začíná na Klientech, psovod na Týdnu.
+| # | Otázka | Náš návrh | F |
+| --- | --- | --- | --- |
+| 1 | Větvení: týká se plánu na týdny, nebo jednoho tréninku? Trénují se obě větve? (příklad se Zoe) | Plán na týdny, obě větve souběžně | F-15 |
+| 2 | Chcete u plánu i cíl („5 km pod 5 min/km“)? | V MVP stačí název a disciplína | F-12 |
+| 3 | Chcete po tréninku i % úspěšnosti? | Jedno pole za celý trénink | F-24 |
+| 4 | Video nahrát, nebo stačí odkaz? | Odkaz (YouTube, Disk) | F-25 |
+| 5 | Kdo zařadí trénink na dny? Smí ho psovod přesunout? | Trenér vybere dny, psovod může přesunout | F-20 |
+| 6 | Má plán upravovat i psovod? Jde aplikace používat bez trenéra? | Ne, jen trenér | F-16 |
+| 7 | Zve trenér člověka, nebo psa? Jak dlouho platí kód? | Člověka, kód 7 dní | F-08 |
+| 8 | Kde psovod uvidí odpověď trenéra? | Vlákno u tréninku + štítek v Týdnu | F-30 |
+| 9 | Vidí psovod záložku Klienti? Kde kdo začíná? | Ne; trenér na Klientech, psovod na Týdnu | F-01 |
