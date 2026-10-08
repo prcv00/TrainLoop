@@ -11,7 +11,7 @@
 | Pojem | Význam | Příklad |
 | --- | --- | --- |
 | **Disciplína** | Oblast, ve které pes trénuje | canicross, nosework, poslušnost |
-| **Cvik** | Jeden konkrétní krok. V briefu se mu říká „úkol“ | „Běh v plném tahu 400 m“, „oční kontakt“ |
+| **Cvik** | Jeden konkrétní krok | „Běh v plném tahu 400 m“, „oční kontakt“ |
 | **Sekvence cviků** | Několik cviků, které jdou vždy po sobě jako jeden blok | rozběh → 3× 400 m → vyklusání |
 | **Plán** | Cviky a sekvence seřazené za sebou, případně rozvětvené. Trenér ho skládá pro psa v disciplíně na obrazovce *Tvorba tréninku* | „Trénink pro Rexe“ ve wireframu |
 | **Trénink** | Jedno cvičení v konkrétní den v kalendáři. Psovod ho prochází cvik po cviku | „Alík Canicross Trénink“ v pátek |
@@ -30,7 +30,7 @@
 
 **Lineární plán** je jako sešit: cvik 1 → 2 → 3 → 4, vždy ve stejném pořadí.
 
-**Nelineární plán** podle briefu reaguje na to, jak psovi trénink jde. Mění se **v čase, napříč tréninky a týdny**, podle zapsaných výsledků. Na příkladu z briefu (plán „pozornost v silně rušivém prostředí“: oční kontakt → delší podržení → mírné rušivky → silné rušivky):
+**Nelineární plán** reaguje na to, jak psovi trénink jde. Mění se **v čase, napříč tréninky a týdny**, podle zapsaných výsledků. Na příkladu (plán „pozornost v silně rušivém prostředí“: oční kontakt → delší podržení → mírné rušivky → silné rušivky):
 
 | Situace | Co se v plánu stane | Feature |
 | --- | --- | --- |
@@ -39,7 +39,7 @@
 | Skok mezi mírnými a silnými rušivkami je moc velký | **Vložení mezikroku** | F-13 |
 | Pes se při rušivkách přetěžuje | **Rozvětvení:** cesta se rozdělí na dvě větve, které se trénují souběžně (např. „pozornost venku“ a „práce s klidem“). Až pes obě zvládne, cesty se znovu spojí | F-15 |
 
-Wireframe kreslí větvení na obrazovce *Tvorba tréninku*. Není ale jasné, jestli tato obrazovka znázorňuje **plán na několik týdnů** (význam z briefu), nebo **jeden trénink** (pak by větev znamenala, že si psovod během tréninku vybere jednu cestu). Na tom závisí datový model, proto je to otázka č. 1.
+Wireframe kreslí větvení na obrazovce *Tvorba tréninku*. Není ale jasné, jestli tato obrazovka znázorňuje **plán na několik týdnů** (jak je popsáno výše), nebo **jeden trénink** (pak by větev znamenala, že si psovod během tréninku vybere jednu cestu). Na tom závisí datový model, proto je to otázka č. 1.
 
 ## Obrazovky
 
