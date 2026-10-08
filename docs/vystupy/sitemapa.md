@@ -68,18 +68,4 @@ Sloupec *Wireframe* uvádí název rámce ve Figmě, nebo „chybí“, pokud ob
 | Nevratná akce (smazání bloku, psa, účtu) | Potvrzovací dialog |
 | Neexistující stránka, chyba serveru | 404 / chybová obrazovka s možností zkusit znovu |
 
-## Otázky pro PO
-
-Seřazené podle důležitosti. Návrh je výchozí bod k diskuzi.
-
-| # | Otázka | Náš návrh | F |
-| --- | --- | --- | --- |
-| 1 | Větvení: týká se plánu na týdny, nebo jednoho tréninku? Trénují se obě větve? (příklad se Zoe) | Plán na týdny, obě větve souběžně | F-15 |
-| 2 | Chcete u plánu i cíl („5 km pod 5 min/km“)? | V MVP stačí název a disciplína | F-12 |
-| 3 | Chcete po tréninku i % úspěšnosti? | Jedno pole za celý trénink | F-24 |
-| 4 | Video nahrát, nebo stačí odkaz? | Odkaz (YouTube, Disk) | F-25 |
-| 5 | Kdo zařadí trénink na dny? Smí ho psovod přesunout? | Trenér vybere dny, psovod může přesunout | F-20 |
-| 6 | Má plán upravovat i psovod? Jde aplikace používat bez trenéra? | Ne, jen trenér | F-16 |
-| 7 | Zve trenér člověka, nebo psa? Jak dlouho platí kód? | Člověka, kód 7 dní | F-08 |
-| 8 | Kde psovod uvidí odpověď trenéra? | Vlákno u tréninku + štítek v Týdnu | F-30 |
-| 9 | Vidí psovod záložku Klienti? Kde kdo začíná? | Ne; trenér na Klientech, psovod na Týdnu | F-01 |
+Otázky pro PO jsou v [otazky-na-klienta.md](otazky-na-klienta.md).
